@@ -15,6 +15,7 @@ const telenor = document.querySelector("#telenor");
 const mobilink = document.querySelector("#mobilink");
 const zong = document.querySelector("#zong");
 const ufone = document.querySelector("#ufone");
+const copyBtn = document.querySelector(".copy");
 let numbersFinal;
 
 // Function to format date string
@@ -147,4 +148,19 @@ ufone.addEventListener("click", () => {
     "|" +
     csv;
   output.innerHTML = ufoneString;
+});
+
+copyBtn.addEventListener("click", function () {
+  // Get the text content of the parent div and all its descendants
+  const textToCopy = output.innerText;
+
+  // Use the Clipboard API to copy the text
+  navigator.clipboard.writeText(textToCopy);
+  copyBtn.innerText = "Copied!";
+  copyBtn.style.color = "#22c55e";
+
+  setTimeout(() => {
+    copyBtn.innerText = "Copy";
+    copyBtn.style.color = "#fff";
+  }, 2000);
 });
