@@ -1,76 +1,64 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
+  <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!--? Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
-        rel="stylesheet" />
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
     <!--` Fonts -->
     <link rel="stylesheet" href="index.css" />
     <title>CDR FORMATTER</title>
-</head>
+  </head>
 
-<body>
+  <body>
     <div class="logo-div">
-        <img src="logo.png" alt="Logo" class="logo" />
+      <img src="logo.png" alt="Logo" class="logo" />
     </div>
-    <h1 class="page-heading">CDR FORMATTER
-    </h1>
-    <p class="sub-heading">
-        Operations Room, DIGP South Zone, Karachi
-    </p>
+    <h1 class="page-heading">CDR FORMATTER</h1>
+    <p class="sub-heading">Operations Room, DIGP South Zone, Karachi</p>
     <div class="main">
-        <textarea class="textarea" placeholder="Enter mobile numbers . . ." id="numbers"></textarea>
-        <!-- input div -->
-        <div class="input-div">
-            <span>
-                <p>From:</p>
-                <input type="date" />
-            </span>
-            <span>
-                <p>To:</p>
-                <input type="date" />
-            </span>
+      <textarea
+        class="textarea"
+        placeholder="Enter mobile numbers . . ."
+        id="numbers"
+      ></textarea>
+      <!-- input div -->
+      <div class="input-div">
+        <span>
+          <p>From:</p>
+          <input type="date" id="from" />
+        </span>
+        <span>
+          <p>To:</p>
+          <input type="date" id="to" />
+        </span>
+      </div>
+      <!-- button div -->
+      <div class="button-div">
+        <div>
+          <button class="converter" id="telenor">Telenor</button>
+          <button class="converter" id="mobilink">Mobilink</button>
         </div>
-        <!-- button div -->
-        <div class="button-div">
-            <div>
-                <button class="converter">Telenor</button>
-                <button class="converter">Mobilink</button>
-            </div>
-            <div>
-                <button class="converter">Zong</button>
-                <button class="converter">Ufone</button>
-            </div>
+        <div>
+          <button class="converter" id="zong">Zong</button>
+          <button class="converter" id="ufone">Ufone</button>
         </div>
-        <div class="textarea">
-            <p class="bold network">
-                Network : <span>Telenor</span></p><br>
-            <p class="bold"> Total Mobile Numbers : <span>10</span></p>
-            <p>
-                0330362257 <br>
-                0330362257 <br>
-                0330362257 <br>
-                0330362257 <br>
-                0330362257 <br>
-                0330362257 <br>
-                0330362257 <br>
-                0330362257 <br>
-                0330362257 <br>
-                0330362257 <br>
-                0330362257 <br>
-            </p>
-            <br>
-            <p class="bold">Output:</p>
-            <p>465321684613*3-13-234*//3212</p>
-        </div>
+      </div>
+      <div class="textarea">
+        <p class="bold network">Network : <span id="network"></span></p>
+        <br />
+        <p class="bold">Total Mobile Numbers : <span id="mbl-count"></span></p>
+        <p id="mbl-nums"></p>
+        <br />
+        <p class="bold">Output:</p>
+        <p id="output"></p>
+      </div>
     </div>
-</body>
-<script src="./index.js"></script>
-
+  </body>
+  <script src="./index.js"></script>
 </html>
