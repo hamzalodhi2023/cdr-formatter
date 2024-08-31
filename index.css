@@ -233,4 +233,9 @@ body {
   font-size: 18px;
   cursor: pointer;
   background-color: #2a489e;
+  transition: 0.3s;
+}
+
+.button-div div button:hover {
+  background-color: #3c62ca;
 }
