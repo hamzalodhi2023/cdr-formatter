@@ -123,6 +123,14 @@
   display: none;
 }
 
+.network {
+  font-size: 24px;
+}
+
+.bold {
+  font-weight: 400;
+}
+
 body {
   background-color: var(--bodyColor);
   min-height: 180dvh;
@@ -131,10 +139,17 @@ body {
 .logo-div {
   /* border: 1px solid #000; */
   width: 100%;
-  padding: 5px 0px;
+  padding: 20px 0px;
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+.sub-heading {
+  text-align: center;
+  font-size: 18px;
+  font-weight: 200;
+  margin-bottom: 20px;
 }
 
 .logo {
@@ -155,19 +170,20 @@ body {
   justify-content: center;
   flex-direction: column;
   gap: 10px;
+  padding-bottom: 20px;
 }
 
 .main .textarea {
-  width: 80%;
   background-color: var(--input-bg);
+  width: 80%;
+  min-height: 200px;
   padding: 10px;
   font-size: 18px;
-  height: 200px;
-  outline: none;
-  border: none;
-  resize: none;
   font-weight: 200;
+  border: none;
   border-radius: 8px;
+  outline: none;
+  resize: none;
 }
 
 .main .input-div {
