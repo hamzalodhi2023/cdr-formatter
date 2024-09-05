@@ -72,7 +72,7 @@ telenor.addEventListener("click", () => {
   let csv = numbersFinal.reduce((total, num) => {
     return num + "," + total;
   });
-  let telenorString = "tps:" + csv + ":";
+  let telenorString = "tpn:" + csv + ":";
   output.innerHTML = telenorString;
 });
 
@@ -87,18 +87,22 @@ mobilink.addEventListener("click", () => {
     alert("Please enter date range!");
     return;
   }
-  let ssv = numbersFinal.reduce((total, num) => {
-    return num + ";" + total;
+  let ssv = numbersFinal.map((num) => {
+    return (
+      "A;" +
+      num +
+      ";" +
+      dateFormatter(from.value, "/") +
+      ";" +
+      dateFormatter(to.value, "/") +
+      ";"
+    );
   });
 
-  let mobilinkString =
-    "A;" +
-    ssv +
-    ";" +
-    dateFormatter(from.value, "/") +
-    ";" +
-    dateFormatter(to.value, "/") +
-    ";";
+  let mobilinkString = ssv.reduce((total, num) => {
+    return num + "<br>" + total;
+  });
+
   output.innerHTML = mobilinkString;
 });
 
