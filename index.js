@@ -88,7 +88,14 @@ telenor.addEventListener("click", () => {
     return num + "," + total;
   });
   // Format the string for Telenor
-  let telenorString = "tpn:" + csv + ":";
+  let telenorString =
+    "tpn:" +
+    csv +
+    ":" +
+    dateFormatter(from.value, "-") +
+    ":" +
+    dateFormatter(to.value, "-") +
+    ":";
   output.innerHTML = telenorString;
 });
 
