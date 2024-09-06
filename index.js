@@ -47,7 +47,11 @@ converters.forEach((converter) => {
       alert("Please enter mobile numbers!");
       return;
     }
-
+    // Check if date range is provided
+    if (from.value === "" || to.value === "") {
+      alert("Please enter date range!");
+      return;
+    }
     // Show the output div
     outputDiv.classList.remove("display-none");
     // Clear previous results
@@ -77,12 +81,6 @@ converters.forEach((converter) => {
 
 // Telenor converter
 telenor.addEventListener("click", () => {
-  // Check if the input textarea is empty
-  if (numbersTextArea === "") {
-    alert("Please enter numbers");
-    return;
-  }
-
   // Create a comma-separated string of numbers
   let csv = numbersFinal.reduce((total, num) => {
     return num + "," + total;
@@ -101,17 +99,6 @@ telenor.addEventListener("click", () => {
 
 // Mobilink converter
 mobilink.addEventListener("click", () => {
-  // Check if the input textarea is empty
-  if (numbersTextArea === "") {
-    alert("Please enter numbers");
-    return;
-  }
-
-  // Check if date range is provided
-  if (from.value === "" || to.value === "") {
-    alert("Please enter date range!");
-    return;
-  }
   // Create an array of formatted strings for each number
   let ssv = numbersFinal.map((num) => {
     return (
@@ -135,16 +122,6 @@ mobilink.addEventListener("click", () => {
 
 // Zong converter
 zong.addEventListener("click", () => {
-  // Check if the input textarea is empty
-  if (numbersTextArea === "") {
-    alert("Please enter numbers");
-    return;
-  }
-  // Check if date range is provided
-  if (from.value === "" || to.value === "") {
-    alert("Please enter date range!");
-    return;
-  }
   // Create a comma-separated string of numbers
   let csv = numbersFinal.reduce((total, num) => {
     return num + ", " + total;
@@ -161,16 +138,6 @@ zong.addEventListener("click", () => {
 
 // Ufone converter
 ufone.addEventListener("click", () => {
-  // Check if the input textarea is empty
-  if (numbersTextArea === "") {
-    alert("Please enter numbers");
-    return;
-  }
-  // Check if date range is provided
-  if (from.value === "" || to.value === "") {
-    alert("Please enter date range!");
-    return;
-  }
   // Create a colon-separated string of numbers
   let csv = numbersFinal.reduce((total, num) => {
     return num + ":" + total;
